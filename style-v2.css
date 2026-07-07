@@ -159,7 +159,7 @@ z-index:999;
 
     width:100%;
 
-    min-height:640px;
+    min-height:380px;
 
     margin:40px 0 100px;
 
@@ -767,7 +767,8 @@ footer p{
 ========================= */
 
 @media(max-width:900px){
-
+.hero{
+        min-height:320px; 
     nav{
 
         flex-direction:column;
