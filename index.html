@@ -27,12 +27,29 @@
 </div>
 
 <div class="menu-links">
-<a href="#">Anasayfa</a>
-<a href="#flowers">Çiçekler</a>
-<a href="#about">Hakkımızda</a>
-<a href="#contact">İletişim</a>
-</div>
 
+    <a href="#">Anasayfa</a>
+
+    <div class="dropdown">
+
+        <a href="#flowers">Koleksiyon ▾</a>
+
+        <div class="dropdown-content">
+
+            <a href="gul.html">Gül Buketi</a>
+            <a href="#aycicegi">Ayçiçeği</a>
+            <a href="#lale">Lale Buketi</a>
+            <a href="#orkide">Orkide</a>
+
+        </div>
+
+    </div>
+
+    <a href="#about">Hikâyemiz</a>
+
+    <a href="#contact">İletişim</a>
+
+</div>
 <div id="cart">
 🛒 Sepet (<span id="cart-count">0</span>)
 </div>
@@ -79,7 +96,7 @@ Toplam: <span id="cart-total">0</span> ₺
 
 <section class="flowers" id="flowers">
 
-<div class="card" data-name="Gül Buketi" data-price="1050">
+<div class="card" id="gul" data-name="Gül Buketi" data-price="1050">
 
 <img src="images/gul.png" alt="Gül">
 
@@ -90,7 +107,7 @@ Toplam: <span id="cart-total">0</span> ₺
 <button class="add-to-cart">Sepete Ekle</button>
 
 </div>
-<div class="card" data-name="Ayçiçeği" data-price="950">
+<div class="card" id="aycicegi" data-name="Ayçiçeği" data-price="950">
 
 <img src="images/aycicegi.png" alt="Ayçiçeği">
 
@@ -102,7 +119,7 @@ Toplam: <span id="cart-total">0</span> ₺
 
 </div>
 
-<div class="card" data-name="Lale Buketi" data-price="950">
+<div class="card" id="lale" data-name="Lale Buketi" data-price="950">
 
 <img src="images/lale.jfif" alt="Lale">
 
@@ -114,7 +131,7 @@ Toplam: <span id="cart-total">0</span> ₺
 
 </div>
 
-<div class="card" data-name="Orkide" data-price="1200">
+<div class="card" id="orkide" data-name="Orkide" data-price="1200">
 
 <img src="images/orkide.jfif" alt="Orkide">
 
