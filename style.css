@@ -65,9 +65,7 @@ nav{
 
     z-index:999;
 }
-<div class="cart">
-    🛒 Sepet: <span id="cart-count">0</span>
-</div>
+
 .menu-links{
     display:flex;
     align-items:center;
@@ -222,6 +220,7 @@ nav{
     box-shadow:0 10px 30px rgba(0,0,0,.06);
     padding-bottom:30px;
     text-align:center;
+     padding-bottom:25px;
 }
 
 
@@ -235,10 +234,6 @@ nav{
     color:#5a4343;
     margin:15px 0;
 }
-.card{
-    padding-bottom:25px;
-}
-
 .card h2,
 .card p,
 .buy-btn{
@@ -312,7 +307,7 @@ nav{
 
 .buy-btn::after{
     content:"";
-    position:absolute;
+   
 }
 
 .btn{
@@ -683,4 +678,13 @@ footer p{
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+}
+.cart-item button{
+
+    border:none;
+    background:#f7d6df;
+    border-radius:50%;
+    cursor:pointer;
+    padding:5px 8px;
+
 }
