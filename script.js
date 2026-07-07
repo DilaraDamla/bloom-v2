@@ -62,6 +62,7 @@ buttons.forEach(button => {
 
 
 function updateCart(){
+    localStorage.setItem("cart", JSON.stringify(cart));
 
     cartItems.innerHTML = "";
 
@@ -164,3 +165,4 @@ function addProduct(index){
     updateCart();
 
 }
+updateCart();
