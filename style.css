@@ -73,17 +73,15 @@ nav{
 }
 .menu-links a{
 
-    position:relative;
-
-    text-decoration:none;
-
-    color:#555;
+    font-size:15px;
 
     font-weight:500;
 
-    font-size:17px;
+    color:#555;
 
-    transition:.3s;
+    padding:8px 0;
+
+    position:relative;
 
 }
 .menu-links a::after{
@@ -94,15 +92,21 @@ nav{
 
     left:0;
 
-    bottom:-6px;
+    bottom:-4px;
 
     width:0;
 
     height:2px;
 
-    background:#d97b98;
+    background:#8A6A44;
 
     transition:.3s;
+
+}
+
+.menu-links a:hover::after{
+
+    width:100%;
 
 }
 .menu-links a:hover{
@@ -118,17 +122,15 @@ nav{
 }
 .logo{
 
-    font-size:42px;
+    font-family:'Playfair Display',serif;
 
-    font-weight:700;
+    font-size:32px;
 
-    color:#5b4343;
+    font-weight:600;
 
-    display:flex;
+    letter-spacing:2px;
 
-    align-items:center;
-
-    gap:10px;
+    color:#2F3E34;
 
 }
 .logo:hover{
@@ -147,43 +149,43 @@ nav{
 }
 #cart{
 
-    background:#f7d6df;
+    background:#2F3E34;
 
-    padding:18px 28px;
+    color:white;
 
-    border-radius:28px;
+    padding:14px 22px;
 
-    font-weight:600;
+    border-radius:14px;
 
-    cursor:pointer;
-
-    transition:.3s;
+    font-size:15px;
 
 }
 #cart:hover{
 
-    transform:translateY(-3px);
-
-    background:#efbfd0;
+    background:#8A6A44;
 
 }
 
 /* ===== HERO ===== */
 
 .hero{
-    max-width:100%;
-    margin:40px auto 80px;
-    padding:90px 20px;
 
-    text-align:center;
+    min-height:85vh;
 
-    background:linear-gradient(
-        135deg,
-        #fff1f5,
-        #ffffff
-    );
+    display:grid;
 
-    border-radius:0 0 70px 70px;
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:60px;
+
 }
 
 .hero h1{
@@ -312,30 +314,22 @@ nav{
 
 .btn{
 
-    display:inline-block;
-
-    margin-top:30px;
-
-    padding:15px 34px;
-
-    border-radius:50px;
-
-    background:#d4a5a5;
+    background:#2F3E34;
 
     color:white;
 
-    text-decoration:none;
+    padding:18px 34px;
 
-    transition:.35s;
+    border-radius:14px;
 
-    box-shadow:0 10px 25px rgba(212,165,165,.3);
+    display:inline-block;
+
+    font-weight:600;
 
 }
 .btn:hover{
 
-    transform:translateY(-4px);
-
-    background:#c48a8a;
+    background:#8A6A44;
 
 }
 .buy-btn:hover{
@@ -1191,8 +1185,8 @@ nav{
 
     background:white;
 
-    border-radius:24px;
-
+    border-radius:30px;
+.hero
     overflow:hidden;
 
     box-shadow:0 12px 35px rgba(0,0,0,.08);
@@ -1211,7 +1205,7 @@ nav{
 
 .collection-card img{
 
-    height:280px;
+    height:320px;
 
     object-fit:cover;
 
@@ -1289,13 +1283,9 @@ nav{
 
 .hero-left h1{
 
-    font-family:'Playfair Display',serif;
+    font-size:78px;
 
-    font-size:68px;
-
-    line-height:1.1;
-
-    color:#2F3E34;
+    line-height:1;
 
     margin:20px 0;
 
@@ -1333,9 +1323,11 @@ nav{
 
     width:100%;
 
-    border-radius:30px;
+    max-height:700px;
 
-    box-shadow:0 25px 50px rgba(0,0,0,.10);
+    object-fit:cover;
+
+    border-radius:35px;
 
 }
 @media(max-width:900px){

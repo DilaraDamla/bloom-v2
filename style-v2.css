@@ -1,3 +1,8 @@
+section{
+
+    padding:40px 0;
+
+}
 /* =========================
    BLOOM 3.0 DESIGN SYSTEM
 ========================= */
@@ -14,11 +19,9 @@ html{
 
 body{
 
-    font-family:'Poppins',sans-serif;
+    background:
 
-    background:#FAF8F4;
-
-    color:#2F3E34;
+    radial-gradient(circle at top left,#F7F3EC 0%,#FAF8F4 45%,#FFFFFF 100%);
 
 }
 
@@ -34,18 +37,17 @@ img{
 
 :root{
 
-    --background:#FAF8F4;
+--bg:#F8F7F4;
 
-    --white:#ffffff;
+--white:#ffffff;
 
-    --text:#2F3E34;
+--text:#2E2E2E;
 
-    --accent:#8A6A44;
+--green:#4D6658;
 
-    --border:#E8E3DC;
+--gold:#B59663;
 
-    --shadow:
-    0 15px 35px rgba(0,0,0,.08);
+--border:#E8E4DD;
 
 }
 /* =========================
@@ -53,16 +55,24 @@ img{
 ========================= */
 
 nav{
+position:sticky;
 
+top:20px;
+
+backdrop-filter:blur(14px);
+
+background:rgba(255,255,255,.88);
+
+z-index:999;
     width:92%;
 
     max-width:1350px;
 
-    height:82px;
+    height:70px;
 
     margin:25px auto;
 
-    padding:0 40px;
+    padding:0 28px;
 
     display:flex;
 
@@ -82,11 +92,11 @@ nav{
 
     font-family:'Playfair Display',serif;
 
-    font-size:38px;
+    font-size:34px;
+
+    letter-spacing:2px;
 
     font-weight:600;
-
-    letter-spacing:1px;
 
 }
 
@@ -133,5 +143,946 @@ nav{
 #cart:hover{
 
     background:#8A6A44;
+
+}
+/* =========================
+          HERO
+========================= */
+
+.hero{
+
+    width:92%;
+    max-width:1400px;
+
+    margin:40px auto 100px;
+
+    min-height:650px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1.2fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+.hero-right::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(248,247,244,.92) 0%,
+        rgba(248,247,244,.55) 30%,
+        rgba(255,255,255,0) 65%
+    );
+
+    z-index:1;
+
+}
+.hero-right{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-left h1{
+
+    font-size:64px;
+
+    line-height:1.1;
+
+}
+.hero-tag{
+
+    color:var(--accent);
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.hero-text{
+
+    max-width:500px;
+
+    font-size:19px;
+
+    line-height:1.9;
+
+}
+
+.hero-right img{
+
+    width:90%;
+
+    max-width:620px;
+
+    height:auto;
+
+    object-fit:contain;
+
+    opacity:.96;
+
+    border-radius:0;
+
+    box-shadow:none;
+
+}
+.hero-signature{
+
+    position:absolute;
+
+    bottom:40px;
+
+    right:40px;
+
+    z-index:2;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:82px;
+
+    color:white;
+
+    opacity:.45;
+
+    font-style:italic;
+
+}
+.btn{
+
+    display:inline-block;
+
+    padding:18px 36px;
+
+    border-radius:50px;
+
+    background:#3E5648;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+    font-size:17px;
+
+}
+
+.btn:hover{
+
+    background:var(--accent);
+
+    transform:translateY(-3px);
+
+}
+/* =========================
+     COLLECTIONS
+========================= */
+
+.collections{
+
+    width:92%;
+    max-width:1350px;
+
+    margin:100px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+.collection-count{
+
+    color:#777;
+    margin-bottom:10px;
+    font-size:15px;
+
+}
+
+.collection-price{
+
+    font-size:22px;
+    font-weight:700;
+    color:#2F3E34;
+    margin-bottom:25px;
+
+}
+
+.collection-card{
+    border:1px solid #ECE7DF;
+
+    background:var(--white);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.collection-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+    0 30px 60px rgba(0,0,0,.12);
+
+}
+.collection-card img{
+
+    height:320px;
+
+    object-fit:cover;
+
+}
+
+.collection-card h2{
+
+    margin:25px;
+
+    margin-bottom:10px;
+
+    font-family:'Playfair Display',serif;
+
+}
+
+.collection-card p{
+
+    margin:0 25px 25px;
+
+    color:#666;
+
+}
+
+.collection-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:0 25px 30px;
+
+    padding:15px 22px;
+
+    border-radius:14px;
+
+    background:#2F3E34;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+.collection-btn:hover{
+
+    background:#8A6A44;
+
+    transform:translateX(6px);
+
+}
+/* =========================
+      DROPDOWN MENU
+========================= */
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown-content{
+
+    position:absolute;
+    top:42px;
+    left:0;
+
+    min-width:220px;
+
+    background:var(--white);
+
+    border-radius:16px;
+
+    box-shadow:var(--shadow);
+
+    display:none;
+
+    overflow:hidden;
+
+}
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:14px 18px;
+
+    transition:.3s;
+
+}
+
+.dropdown-content a:hover{
+
+    background:#F4F1EC;
+
+    color:var(--accent);
+
+}
+
+.dropdown:hover .dropdown-content{
+
+    display:block;
+
+}
+
+/* =========================
+      ABOUT & CONTACT
+========================= */
+
+#about,
+#contact{
+
+    width:92%;
+    max-width:900px;
+
+    margin:120px auto;
+
+    text-align:center;
+
+}
+
+#about h2,
+#contact h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:44px;
+
+    margin-bottom:25px;
+
+}
+
+#about p,
+#contact p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+/* =========================
+        FOOTER
+========================= */
+
+footer{
+
+    margin-top:120px;
+
+    background:#2F3E34;
+
+    color:white;
+
+    padding:60px 20px;
+
+    text-align:center;
+
+}
+
+footer p{
+
+    opacity:.85;
+
+}
+
+/* =========================
+      CART MESSAGE
+========================= */
+
+#cart-message{
+
+    position:fixed;
+
+    top:25px;
+
+    right:25px;
+
+    background:#2F3E34;
+
+    color:white;
+
+    padding:16px 24px;
+
+    border-radius:14px;
+
+    opacity:0;
+
+    transform:translateY(-20px);
+
+    transition:.35s;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+}
+
+#cart-message.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* =========================
+      CART PANEL
+========================= */
+
+#cart-panel{
+
+    position:absolute;
+
+    right:0;
+
+    top:90px;
+
+    width:320px;
+
+    background:white;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    padding:24px;
+
+    display:none;
+
+}
+
+#cart-panel h3{
+
+    margin-bottom:20px;
+
+}
+
+#cart-items{
+
+    margin-bottom:20px;
+
+}
+
+/* =========================
+      RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    nav{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:25px;
+
+        gap:20px;
+
+    }
+
+    .menu-links{
+
+        flex-direction:column;
+
+        gap:18px;
+
+        text-align:center;
+
+    }
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .hero-left h1{
+
+        font-size:52px;
+
+    }
+
+    .hero-text{
+
+        margin:auto auto 35px;
+
+    }
+
+    .hero-right img{
+
+        height:420px;
+
+    }
+
+}
+/* =========================
+        WHY BLOOM
+========================= */
+
+.why-bloom{
+
+    width:92%;
+    max-width:1300px;
+
+    margin:120px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.why-card{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    box-shadowbody:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.why-card span{
+
+    font-size:42px;
+
+}
+
+.why-card h3{
+
+    margin:20px 0;
+
+    font-family:'Playfair Display',serif;
+
+}
+
+.why-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+{
+
+    animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+.badge{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    background:#2F3E34;
+
+    color:white;
+
+    padding:8px 14px;
+
+    border-radius:50px;
+
+    font-size:13px;
+
+}
+
+.collection-card{
+
+    position:relative;
+
+}
+/* =========================
+      REVIEWS
+========================= */
+
+.reviews{
+
+    width:92%;
+    max-width:1300px;
+
+    margin:120px auto;
+
+    text-align:center;
+
+}
+
+.reviews h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:46px;
+
+    margin-bottom:50px;
+
+}
+
+.review-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.review-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.review-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.stars{
+
+    color:#D4A017;
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+}
+
+.review-card p{
+
+    line-height:1.8;
+
+    color:#666;
+
+    margin-bottom:20px;
+
+}
+
+.review-card h4{
+
+    color:var(--accent);
+
+    font-weight:600;
+
+}
+/* PRODUCTS */
+
+.products-grid{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:70px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:35px;
+
+}
+
+.product-card{
+
+    background:white;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.product-card img{
+
+    height:320px;
+
+    object-fit:cover;
+
+}
+
+.product-card h3{
+
+    margin:25px;
+
+    margin-bottom:10px;
+
+}
+
+.product-card p{
+
+    margin:0 25px 25px;
+
+    color:#666;
+
+}
+
+.product-card button{
+
+    margin:0 25px 30px;
+
+    width:calc(100% - 50px);
+
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#2F3E34;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.product-card button:hover{
+
+    background:#8A6A44;
+
+}
+/* PRODUCT PAGE */
+
+.product-page{
+
+    width:92%;
+    max-width:1300px;
+
+    margin:80px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.product-image img{
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.product-info h1{
+
+    font-size:52px;
+
+    font-family:'Playfair Display',serif;
+
+}
+
+.product-info h2{
+
+    margin:25px 0;
+
+    font-size:34px;
+
+}
+
+.rating{
+
+    color:gold;
+
+    margin:20px 0;
+
+    font-size:22px;
+
+}
+
+.product-info p{
+
+    line-height:1.9;
+
+    color:#666;
+
+    margin-bottom:35px;
+
+}
+
+.quantity{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
+
+.quantity button{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2F3E34;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.quantity span{
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+/* INSTAGRAM */
+
+.instagram{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+    text-align:center;
+
+}
+
+.instagram h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:42px;
+
+}
+
+.instagram p{
+
+    color:#777;
+
+    margin:15px 0 45px;
+
+}
+
+.instagram-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.instagram-grid img{
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    transition:.35s;
+
+}
+
+.instagram-grid img:hover{
+
+    transform:scale(1.05);
 
 }
