@@ -11,7 +11,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-v2.css">
+
 </head>
 <body>
     <div id="cart-message">
@@ -34,14 +35,17 @@
 
         <a href="#flowers">Koleksiyon ▾</a>
 
-        <div class="dropdown-content">
+       <div class="dropdown-content">
 
-            <a href="gul.html">Gül Buketi</a>
-            <a href="#aycicegi">Ayçiçeği</a>
-            <a href="#lale">Lale Buketi</a>
-            <a href="#orkide">Orkide</a>
+    <a href="gul.html">Gül Buketi</a>
 
-        </div>
+    <a href="aycicegi.html">Ayçiçeği</a>
+
+    <a href="lale.html">Lale Buketi</a>
+
+    <a href="orkide.html">Orkide</a>
+
+</div>
 
     </div>
 
@@ -71,77 +75,96 @@ Toplam: <span id="cart-total">0</span> ₺
 
 <div class="hero">
 
-    <h1>Bloom Çiçekçilik 🌸</h1>
+    <div class="hero-left">
 
-    <p class="hero-text">
-        Sevginizi çiçeklerle anlatın.
-        Her buket özenle hazırlanır ve en özel anlarınıza eşlik eder.
-    </p>
+        <p class="hero-tag">
+            Premium Floral Studio
+        </p>
 
-    <a href="#flowers" class="btn">Sipariş Ver 💐</a>
+        <h1>
+            Flowers<br>
+            crafted with care.
+        </h1>
 
-    <div class="hero-features">
+        <p class="hero-text">
 
-        <div>🌸 Aynı Gün Teslimat</div>
+            Her buket, en taze çiçeklerle hazırlanır ve
+            özel anlarınıza zarif bir dokunuş katar.
 
-        <div>💝 Özenle Hazırlanır</div>
+        </p>
 
-        <div>🚚 Güvenli Teslimat</div>
+        <a href="#flowers" class="btn">
+            Koleksiyonu Keşfet
+        </a>
+
+    </div>
+
+    <div class="hero-right">
+
+        <img src="images/cicek.png" alt="Bloom">
 
     </div>
 
 </div>
-
 </header>
 
-<section class="flowers" id="flowers">
+<section class="collections" id="flowers">
 
-<div class="card" id="gul" data-name="Gül Buketi" data-price="1050">
+    <div class="collection-card">
 
-<img src="images/gul.png" alt="Gül">
+        <img src="images/gul.png" alt="Gül">
 
-<h2>🌹 Gül Buketi</h2>
+        <h2>Rose Collection</h2>
 
-<p>1050 ₺</p>
+        <p>40 farklı gül buketi</p>
 
-<button class="add-to-cart">Sepete Ekle</button>
+        <a href="gul.html" class="collection-btn">
+            Koleksiyonu İncele
+        </a>
 
-</div>
-<div class="card" id="aycicegi" data-name="Ayçiçeği" data-price="950">
+    </div>
 
-<img src="images/aycicegi.png" alt="Ayçiçeği">
+    <div class="collection-card">
 
-<h2>🌻 Ayçiçeği</h2>
+        <img src="images/lale.jfif" alt="Lale">
 
-<p>950 ₺</p>
+        <h2>Tulip Collection</h2>
 
-<button class="add-to-cart">Sepete Ekle</button>
+        <p>18 farklı lale buketi</p>
 
-</div>
+        <a href="lale.html" class="collection-btn">
+            Koleksiyonu İncele
+        </a>
 
-<div class="card" id="lale" data-name="Lale Buketi" data-price="950">
+    </div>
 
-<img src="images/lale.jfif" alt="Lale">
+    <div class="collection-card">
 
-<h2>🌷 Lale Buketi</h2>
+        <img src="images/orkide.jfif" alt="Orkide">
 
-<p>950 ₺</p>
+        <h2>Orchid Collection</h2>
 
-<button class="add-to-cart">Sepete Ekle</button>
+        <p>15 farklı orkide</p>
 
-</div>
+        <a href="orkide.html" class="collection-btn">
+            Koleksiyonu İncele
+        </a>
 
-<div class="card" id="orkide" data-name="Orkide" data-price="1200">
+    </div>
 
-<img src="images/orkide.jfif" alt="Orkide">
+    <div class="collection-card">
 
-<h2>🪻 Orkide</h2>
+        <img src="images/aycicegi.png" alt="Ayçiçeği">
 
-<p>1200 ₺</p>
+        <h2>Sunflower Collection</h2>
 
-<button class="add-to-cart">Sepete Ekle</button>
+        <p>12 farklı ayçiçeği</p>
 
-</div>
+        <a href="aycicegi.html" class="collection-btn">
+            Koleksiyonu İncele
+        </a>
+
+    </div>
 
 </section>
 
