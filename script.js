@@ -8,7 +8,7 @@ const cartPanel = document.getElementById("cart-panel");
 const cartItems = document.getElementById("cart-items");
 const cartTotal = document.getElementById("cart-total");
 
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 
 buttons.forEach(button => {
@@ -42,6 +42,7 @@ buttons.forEach(button => {
 
 
         updateCart();
+        localStorage.setItem("cart", JSON.stringify(cart));
 
 
         if(message){
@@ -92,11 +93,21 @@ function updateCart(){
             </span>
 
 
-            <button onclick="removeProduct(${index})">
+          <div class="quantity">
+
+<button onclick="removeProduct(${index})">
 ➖
 </button>
 
-        </div>
+<span>
+${product.quantity}
+</span>
+
+<button onclick="addProduct(${index})">
+➕
+</button>
+
+</div>
 
         `;
 
@@ -146,3 +157,10 @@ cartButton.addEventListener("click",()=>{
 
 
 });
+function addProduct(index){
+
+    cart[index].quantity++;
+
+    updateCart();
+
+}

@@ -688,3 +688,35 @@ footer p{
     padding:5px 8px;
 
 }
+.quantity{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:8px;
+
+}
+
+
+.quantity button{
+
+    width:28px;
+    height:28px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#f7d6df;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+
+.quantity span{
+
+    font-weight:600;
+
+}
