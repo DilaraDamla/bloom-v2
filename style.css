@@ -1,0 +1,657 @@
+/* ===== GENEL ===== */
+
+
+     *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#ffffff;
+    color:#444;
+}
+
+/* ===== HEADER ===== */
+
+header{
+    position:relative;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:0;
+
+    background:transparent;
+
+    box-shadow:none;
+}
+/* ===== MENÜ ===== */
+
+nav{
+    position:sticky;
+    top:18px;
+    width:95%;
+    max-width:1250px;
+    margin:20px auto;
+    padding:18px 35px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(255,255,255,.78);
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.7);
+
+    border-radius:60px;
+
+    box-shadow:
+    0 10px 35px rgba(217,123,152,.08);
+
+    z-index:999;
+}
+.menu-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+.menu-links a{
+
+    position:relative;
+
+    text-decoration:none;
+
+    color:#555;
+
+    font-weight:500;
+
+    font-size:17px;
+
+    transition:.3s;
+
+}
+.menu-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#d97b98;
+
+    transition:.3s;
+
+}
+.menu-links a:hover{
+
+    color:#d97b98;
+
+}
+
+.menu-links a:hover::after{
+
+    width:100%;
+
+}
+.logo{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#5b4343;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+.logo:hover{
+    color:#c48a8a;
+
+}
+
+.menu-links a:hover{
+
+    background:white;
+
+    color:#d97b98;
+
+    box-shadow:0 8px 20px rgba(217,123,152,.12);
+
+}
+#cart{
+
+    background:#f7d6df;
+
+    padding:18px 28px;
+
+    border-radius:28px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+#cart:hover{
+
+    transform:translateY(-3px);
+
+    background:#efbfd0;
+
+}
+
+/* ===== HERO ===== */
+
+.hero{
+    max-width:100%;
+    margin:40px auto 80px;
+    padding:90px 20px;
+
+    text-align:center;
+
+    background:linear-gradient(
+        135deg,
+        #fff1f5,
+        #ffffff
+    );
+
+    border-radius:0 0 70px 70px;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:58px;
+    font-weight:500;
+    letter-spacing:-1px;
+    color:#5b4343;
+    margin-bottom:20px;
+}
+
+.hero-features div{
+    background:white;
+    padding:15px 22px;
+    border-radius:30px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+/* ===== ÇİÇEKLER ===== */
+
+.flowers{
+    width:90%;
+    max-width:1200px;
+    margin:80px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:22px;
+    overflow:hidden;
+    transition:.35s;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    padding-bottom:30px;
+    text-align:center;
+}
+
+
+.price{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    font-size:28px;
+    font-weight:700;
+    color:#5a4343;
+    margin:15px 0;
+}
+.card{
+    padding-bottom:25px;
+}
+
+.card h2,
+.card p,
+.buy-btn{
+    display:block;
+    margin:20px auto 0;
+}
+.card p{
+    width:100%;
+    text-align:center;
+    font-size:20px;
+    font-weight:600;
+    color:#555;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.card h2{
+    margin-top:20px;
+    color:#d97b98;
+    font-size:24px;
+}
+
+.card p{
+    margin:15px 0;
+    font-size:20px;
+    font-weight:600;
+    color:#555;
+}
+
+.buy-btn{
+    width:85%;
+    height:52px;
+
+    border:none;
+    border-radius:30px;
+
+    background:linear-gradient(135deg,#f58cab,#e56d95);
+    color:white;
+
+    font-size:18px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+    box-shadow:0 12px 25px rgba(229,109,149,.25);
+}
+.buy-btn:active{
+    transform:scale(.95);
+}
+
+.buy-btn::after{
+    content:"";
+    position:absolute;
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:15px 34px;
+
+    border-radius:50px;
+
+    background:#d4a5a5;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(212,165,165,.3);
+
+}
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#c48a8a;
+
+}
+.buy-btn:hover{
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:0 18px 35px rgba(229,109,149,.35);
+}
+/* ===== HERO DETAYLARI ===== */
+
+.hero-text{
+    max-width:650px;
+    margin:0 auto 35px;
+    line-height:1.8;
+    font-size:19px;
+}
+
+.hero-features{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:45px;
+    flex-wrap:wrap;
+}
+
+.hero-features div{
+    background:white;
+    padding:14px 22px;
+    border-radius:30px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    font-weight:500;
+
+}
+:root{
+    --primary:#d97b98;
+    --primary-light:#ffe8ef;
+    --background:#fff8fb;
+}
+/* ===== HAKKIMIZDA & İLETİŞİM ===== */
+
+#about,
+#contact{
+    max-width:900px;
+    margin:90px auto;
+    padding:0 25px;
+    text-align:center;
+}
+
+#about h2,
+#contact h2{
+    font-size:38px;
+    color:#d97b98;
+    margin-bottom:25px;
+}
+
+#about p,
+#contact p{
+    font-size:18px;
+    line-height:1.9;
+    color:#666;
+}
+/* ===== FOOTER ===== */
+
+footer{
+
+    padding:50px;
+
+    text-align:center;
+
+    color:#777;
+
+    background:#faf7f6;
+
+}
+
+footer p{
+    color:#888;
+    font-size:15px;
+}
+/* ===== PREMIUM KART DOKUNUŞU ===== */
+
+.card{
+    position:relative;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,#f58cab,#d97b98);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.4s;
+}
+
+.card:hover::before{
+    transform:scaleX(1);
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 50px rgba(217,123,152,.18);
+}
+/* ===== SEPET BİLDİRİMİ ===== */
+
+#cart-message{
+    position:fixed;
+
+    top:30px;
+    right:30px;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(15px);
+
+    color:#b65f7c;
+
+    padding:18px 28px;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    box-shadow:0 15px 40px rgba(217,123,152,.18);
+
+    border:1px solid rgba(255,255,255,.8);
+
+    opacity:0;
+
+    transform:translateY(-20px);
+
+    pointer-events:none;
+
+    transition:.4s;
+
+    z-index:9999;
+}
+
+
+#cart-message.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+/* ===== HERO ANİMASYON ===== */
+
+.hero h1{
+    animation:fadeDown .8s ease forwards;
+     color:#5b4343;
+}
+
+.hero-text{
+    animation:fadeUp 1s ease .2s forwards;
+    opacity:0;
+}
+
+.hero .btn{
+    animation:fadeUp 1s ease .4s forwards;
+    opacity:0;
+}
+
+
+@keyframes fadeDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+.hero {
+    background-image: url("images/cicek.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 450px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+}
+.hero::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,0.15);
+
+}
+
+.hero {
+    width: 100%;
+    height: 300px;
+
+    background-image: url("images/cicek.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+}
+.hero h1,
+.hero p {
+    position:relative;
+    z-index:1;
+      color:#5b4343;
+    font-weight:600;
+    text-shadow:0 2px 8px rgba(255,255,255,0.6);
+}
+.hero-features div{
+    color:#5b4343;
+    font-weight:600;
+}
+.buy-btn{
+    width:85%;
+    height:56px;
+
+    border:none;
+    border-radius:35px;
+
+    background:linear-gradient(135deg,#e88aa5,#d45f85);
+
+    color:white;
+
+    font-size:19px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 12px 25px rgba(212,95,133,.35);
+
+    transition:.35s;
+
+    position:relative;
+    overflow:hidden;
+}
+
+
+.buy-btn:hover{
+    transform:translateY(-5px) scale(1.04);
+
+    box-shadow:
+    0 18px 35px rgba(212,95,133,.45);
+}
+
+
+.buy-btn:active{
+    transform:scale(.95);
+}
+.buy-btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:50%;
+    height:100%;
+
+    background:rgba(255,255,255,.35);
+
+    transform:skewX(-25deg);
+
+    transition:.5s;
+}
+
+
+.buy-btn:hover::before{
+    left:150%;
+}
+.btn{
+    background:linear-gradient(135deg,#f06b96,#d94b78);
+    color:white;
+    font-weight:700;
+    font-size:18px;
+    box-shadow:0 12px 30px rgba(217,75,120,.35);
+}
+
+.btn:hover{
+    background:linear-gradient(135deg,#f57da5,#cc3e6c);
+    transform:translateY(-5px);
+    box-shadow:0 18px 35px rgba(217,75,120,.45);
+}
